@@ -15,8 +15,8 @@
     "ldrs": "^1.1.7",
     "lucide-react": "^0.510.0",
     "next": "^14.2.30",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.5.3",
@@ -24,20 +24,11 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "autoprefixer": "^10.4.21",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8.5.6",
-    "preline": "^1.9.0",
-    "tailwindcss": "^3.4.17"
-=======
     "@tailwindcss/postcss": "^4.1.10",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-next": "15.3.4",
     "postcss": "^8.4.35",
     "tailwindcss": "^4.1.10"
->>>>>>> fce50fa8c989488e3695f25e29e926acf26d6f13
   }
 }
