@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 /* @import "tailwindcss";
 @source "node_modules/preline/dist"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+@import "tailwindcss";
+/* @source "node_modules/preline/dist"; */
+>>>>>>> fce50fa8c989488e3695f25e29e926acf26d6f13
