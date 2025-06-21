@@ -1,9 +1,12 @@
-// // tailwind.config.js
-// module.exports = {
-//     content: [
-//         './node_modules/preline/preline.js',
-//     ],
-//     plugins: [
-//         require('preline/plugin'),
-//     ],
-//   }
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/preline/preline.js",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('preline/plugin'),
+  ],
+};
