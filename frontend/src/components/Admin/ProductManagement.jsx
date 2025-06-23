@@ -251,17 +251,19 @@ const ProductManagement = () => {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="h-10 w-10 flex-shrink-0">
-                          {product.images && product.images.length > 0 && product.images[0] ? (
-                            <img
-                              className="h-10 w-10 rounded-full object-cover"
-                              src={product.images[0]}
-                              alt={product.name}
-                            />
-                          ) : (
-                            <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
-                              N/A
-                            </div>
-                          )}
+                          <img
+                            className="h-10 w-10 rounded-full object-cover"
+                            src={
+                              product.images && product.images.length > 0 && product.images[0]
+                                ? product.images[0]
+                                : "/images/placeholder.png"
+                            }
+                            alt={product.name}
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = "/images/placeholder.png";
+                            }}
+                          />
                         </div>
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">

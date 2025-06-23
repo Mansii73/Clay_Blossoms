@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { ShoppingCart } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export default function ProductDetail() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`/api/products/${id}`);
+        const response = await fetch(`http://localhost:5000/product/${id}`);
         if (!response.ok) {
           throw new Error('Product not found');
         }

@@ -1,6 +1,6 @@
 import './globals.css';
-import Navbar from './(main)/Navbar';
 import Footer from './(main)/Footer';
+import Navbar from './(main)/Navbar';
 import { AuthProvider } from '../context/AuthContext';
 
 export const metadata = {

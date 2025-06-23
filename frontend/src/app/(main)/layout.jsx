@@ -1,13 +1,18 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import Navbar from './Navbar';
+import { usePathname } from 'next/navigation';
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
+    const pathname = usePathname();
+    const showNavbar = pathname !== '/';
+
     return (
         <>
+            {/* {showNavbar && <Navbar />} */}
             <main>
                 {children}
             </main>
         </>
     )
 }
-
-export default Layout;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Testimonials = () => {
+const Testimonials = () => {
   const testimonials = [
     {
       name: 'Jane Doe',
@@ -8,7 +8,7 @@ export const Testimonials = () => {
     },
     {
       name: 'John Smith',
-      feedback: 'I love the tea set I purchased. It’s perfect for hosting guests.',
+      feedback: 'I love the tea set I purchased. It\'s perfect for hosting guests.',
     },
     {
       name: 'Emily Johnson',

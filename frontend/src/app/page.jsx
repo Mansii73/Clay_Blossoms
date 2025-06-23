@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
-import { HeroSection } from '@/components/HeroSection';
-import { FeaturedProducts } from '@/components/FeaturedProducts';
-import { Categories } from '@/components/Categories';
-import { Testimonials } from '@/components/Testimonials';
-import { Footer } from '@/components/Footer';
+import HeroSection from '@/components/HeroSection';
+import FeaturedProducts from '@/components/FeaturedProducts';
+import Categories from '@/components/Categories';
+import Testimonials from '@/components/Testimonials';
 // import BrowsePage from '@/components/products/BrowsePage'; // Uncomment if you want to use it
 
 const LandingPage = () => {
@@ -15,7 +14,6 @@ const LandingPage = () => {
       {/* <BrowsePage /> */}
       <Categories />
       <Testimonials />
-      <Footer />
     </div>
   );
 };

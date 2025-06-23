@@ -274,4 +274,42 @@ export default function AddProduct() {
                       <span>Upload a file</span>
                       <input 
                         id="file-upload" 
+                        type="file"
+                        multiple
+                        onChange={handleImageChange}
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              {errors.images && <p className="mt-1 text-sm text-red-500">{errors.images}</p>}
+            </div>
+            <button type="submit" className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+              {loading ? 'Adding...' : 'Add Product'}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProductImage({ product }) {
+  return (
+    <img
+      className="h-10 w-10 rounded-full object-cover"
+      src={
+        product.images && product.images.length > 0 && product.images[0]
+          ? product.images[0]
+          : "/images/placeholder.png"
+      }
+      alt={product.name}
+      onError={(e) => {
+        e.target.onerror = null;
+        e.target.src = "/images/placeholder.png";
+      }}
+    />
+  );
+}
    

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaShoppingCart, FaHeart, FaStar, FaShieldAlt, FaTag, FaCreditCard } from 'react-icons/fa';
 import { RiSecurePaymentLine } from "react-icons/ri";
+import { useRouter } from 'next/navigation';
 
 const products = [
   {
@@ -83,6 +84,32 @@ const products = [
         { name: '2 Year Plan', price: 900 },
     ]
   },
+   {
+    id: 3,
+    name: 'Artistic Mug',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted mug with artistic patterns, perfect for your morning coffee or tea. Each mug is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 899,
+    originalPrice: 1199,
+    images: [
+      '/images/mug.jpg',
+      '/images/pot.png',
+      '/images/teaset.jpg',
+      '/images/jug.png'
+    ],
+    category: 'Mugs',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
   {
     id: 4,
     name: 'Decorative Jug',
@@ -108,12 +135,208 @@ const products = [
         { name: '1 Year Plan', price: 1200 },
         { name: '2 Year Plan', price: 2200 },
     ]
+  },
+  {
+    id: 5,
+    name: 'Basic Platter Capsule',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 899,
+    originalPrice: 1199,
+    images: [
+      '/images/platter4.jpg',
+      
+    
+     
+    ],
+    category: 'Plates',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+  {
+    id: 6,
+    name: 'Bowls',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/bowl.png',
+      '/images/bowl2.png',
+    ],
+    category: 'Bowls',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+   {
+    id: 7,
+    name: 'Dinner Set',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/set.png',
+      
+    ],
+    category: 'Dinner Set',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+  {
+    id: 8,
+    name: 'Kettle',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/kettle.png',
+      
+    ],
+    category: 'Kettle',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+   {
+    id: 9,
+    name: 'Cups',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/cups.png',
+      
+    ],
+    category: 'Cups',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+   {
+    id: 10,
+    name: 'Lamp',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/lamp.png',
+    
+    ],
+    category:'Lamp',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+   {
+    id: 11,
+    name: 'Plates',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/plate.png',
+    
+    ],
+    category:'Plates',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
+  },
+  
+   {
+    id: 12,
+    name: 'Round Vases',
+    store: 'ClayBlossoms Official',
+    description: 'Unique handcrafted platter with artistic patterns, perfect for your morning snack . Each platter is individually crafted and painted, making it a one-of-a-kind piece.',
+    price: 569,
+    originalPrice: 1199,
+    images: [
+      '/images/roundvase.png',
+    
+    ],
+    category:'Round Vases',
+    rating: 4.9,
+    ratingsCount: 5210,
+    boughtInPastMonth: 1200,
+    inStock: true,
+    deliveryLocation: 'Lucknow 226005',
+    deliveryDate: 'Tuesday, 24 June',
+    soldBy: 'Artisan Creations',
+    protectionPlans: [
+        { name: '1 Year Plan', price: 500 },
+        { name: '2 Year Plan', price: 900 },
+    ]
   }
 ];
 
 const BrowseProductPage = ({ params }) => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const router = useRouter();
   
   const productId = parseInt(params.id, 10);
   const product = products.find((p) => p.id === productId);
@@ -125,6 +348,12 @@ const BrowseProductPage = ({ params }) => {
         <p className="text-gray-600">The product you're looking for doesn't exist.</p>
       </div>
     );
+  }
+  const handleAddToCart = () => {
+    router.push('/cart');
+  }
+  const handleBuyNow = () => {
+    router.push('/BuyNow');
   }
 
   const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
@@ -235,8 +464,8 @@ const BrowseProductPage = ({ params }) => {
                     </select>
                 </div>
 
-                <button className="w-full bg-yellow-400 hover:bg-yellow-500 rounded-full py-2 font-medium">Add to Cart</button>
-                <button className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-2 font-medium">Buy Now</button>
+                <button onClick={() => handleAddToCart()} className="w-full bg-yellow-400 hover:bg-yellow-500 rounded-full py-2 font-medium">Add to Cart</button>
+                <button onClick={() => handleBuyNow()} className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-full py-2 font-medium">Buy Now</button>
 
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                     <RiSecurePaymentLine className="text-gray-400" size={20}/>
